@@ -1,6 +1,7 @@
 
 
 import './App.css'
+import HeroSection from './Components/HeroSection/HeroSection'
 import Navbar from './Components/Navbar'
 
 function App() {
@@ -8,9 +9,12 @@ function App() {
 
   return (
     <>
-    <header className='W-11/12 mx-auto py-3 border-accent-content'>
+    <header className=' w-[1480px]' >
       <Navbar></Navbar>
      </header>
+     <section >
+      <HeroSection></HeroSection>
+     </section>
       
      
     </>
