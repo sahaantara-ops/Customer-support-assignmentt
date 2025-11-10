@@ -1,26 +1,50 @@
 import React from 'react';
+import { Calendar } from 'lucide-react';
 
-const TicketsCard = () => {
-    const ticketDetails ={
-      
-
-    }
+const TicketsCard = ({ticketDetails}) => {
+  const handleOrder = (ticketDetails) =>{
+    console.log(ticketDetails);
+  }
+   
     return (
-        <div className="card bg-base-100 w-96 shadow-sm">
+        <div 
+        onClick={() =>handleOrder(ticketDetails) }
+        className="card bg-base-100 w-[450px] shadow-sm">
   
   <div className="card-body">
     <div className='flex justify-between'>
-    <h2 className="card-title">{ticketDetails.ticketTitle}</h2>
-    <h2 className='bg-amber-300 rounded-b-box'>{ticketDetails.ticketStatus}</h2>
+    <h2 className="card-title">{ticketDetails.ticket_title}</h2>
+  <h2
+  className={`rounded-lg ${
+    ticketDetails.ticket_status === "Closed"
+      ? "bg-red-500"
+      : ticketDetails.ticket_status === "In Progress"
+      ? "bg-blue-300"
+      : "bg-amber-300"
+  }`}
+>
+  {ticketDetails.ticket_status}
+</h2>
     </div>
     <div>
-        <p className='text-shadow-zinc-400'>{ticketDetails.ticketDescription}</p>
+        <p className='text-shadow-zinc-400'>{ticketDetails.ticket_description}</p>
     </div>
-   <div className="card-actions justify-end">
-      <div className="text-gray-400">{ticketDetails.ticketId}</div>
-      <div className="text-amber-100">{ticketDetails.ticketStatus}</div>
-      <div className="text-gray-400">{ticketDetails.ticketCustomer}</div>
-      <div className="text-gray-400">{ticketDetails.ticketCreatedAt}</div>
+   <div className="card-actions justify-around gap-1">
+      <div className="text-emerald-400">{ticketDetails.ticket_id}</div>
+      <h2
+  className={`rounded-lg ${
+    ticketDetails.ticket_status === "Closed"
+      ? "text-lime-300"
+      : ticketDetails.ticket_status === "In Progress"
+      ? "text-shadow-blue-600"
+      : "text-amber-300"
+  }`}
+>
+  {ticketDetails.ticket_status}
+</h2>
+      <div className="text-gray-400">{ticketDetails.ticket_customer}</div>
+      <div className="text-gray-400"><Calendar />
+       {ticketDetails.ticket_createdAt}</div>
 
     </div>
   </div>
