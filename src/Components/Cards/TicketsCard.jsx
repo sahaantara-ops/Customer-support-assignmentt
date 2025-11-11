@@ -1,10 +1,8 @@
 import React from 'react';
 import { Calendar } from 'lucide-react';
 
-const TicketsCard = ({ticketDetails}) => {
-  const handleOrder = (ticketDetails) =>{
-    console.log(ticketDetails);
-  }
+const TicketsCard = ({ticketDetails,handleOrder}) => {
+ 
    
     return (
         <div 
