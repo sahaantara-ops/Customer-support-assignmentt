@@ -3,7 +3,7 @@ import image1 from '../../assets/vector1.png'
 
 
 
-const HeroSection = ({InProgress}) => {
+const HeroSection = ({InProgress,Resolve}) => {
 
    
 
@@ -21,8 +21,8 @@ const HeroSection = ({InProgress}) => {
   </div>
   <div className='mb-20 mr-16 p-6'>
     <div className= "bg-green-500 w-[500px] h-[250px] rounded-lg shadow-md mt-24">
-    <h3 className= "text-white text-4xl bold center flex justify-center pt-24">Resolved </h3>
-    <h3 className= "text-white text-4xl center flex justify-center">0 </h3>
+    <h3 className= "text-white text-4xl bold center flex justify-center pt-24">Resolve </h3>
+    <h3 className= "text-white text-4xl center flex justify-center">{Resolve} </h3>
     <img src={image1} alt="Green Card" />
     </div>
   </div>

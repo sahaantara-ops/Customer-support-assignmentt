@@ -6,6 +6,7 @@ import HeroSection from './Components/HeroSection/HeroSection'
 import Navbar from './Components/Navbar'
 import OrderContainer from './Components/OrderContainer/OrderContainer'
 import TicketsContainer from './Components/TicketsContainer/TicketsContainer';
+import Footer from './Components/Footer/Footer';
 
 
 const ticketsData = () => fetch('/public/public.json').then((res) => res.json());
@@ -30,6 +31,9 @@ function App() {
       </Suspense>
       
      </section>
+     <footer>
+      <Footer></Footer>
+     </footer>
       
      
     </>
