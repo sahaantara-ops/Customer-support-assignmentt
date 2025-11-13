@@ -6,10 +6,10 @@ import HeroSection from './Components/HeroSection/HeroSection'
 import Navbar from './Components/Navbar'
 import OrderContainer from './Components/OrderContainer/OrderContainer'
 import TicketsContainer from './Components/TicketsContainer/TicketsContainer';
-import Footer from './Components/Footer/Footer';
+import Footer from './Components/Footer/footer';
 
 
-const ticketsData = () => fetch('/public/public.json').then((res) => res.json());
+const ticketsData = () => fetch('/public.json').then((res) => res.json());
 
 
 function App() {
